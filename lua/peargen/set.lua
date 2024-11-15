@@ -10,7 +10,7 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
-vim.opt.pumheight = 5
+vim.opt.pumheight = 10
 
 vim.opt.swapfile = false
 vim.opt.backup = false

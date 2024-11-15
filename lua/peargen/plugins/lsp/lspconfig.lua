@@ -6,7 +6,21 @@ return {
     { "antosha417/nvim-lsp-file-operations", config = true },
     { "folke/neodev.nvim", opts = {} },
   },
-
+  opts = {
+    diagnostics = {
+      update_in_insert = true,
+    },
+    servers = {
+      rust_analyzer = { enable = false },
+      bacon_ls = {
+        enable = true,
+        settings = {
+          -- locationsFile = ".locations",
+          -- waitTimeSeconds = 5
+        },
+      },
+    },
+  },
   config = function()
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
