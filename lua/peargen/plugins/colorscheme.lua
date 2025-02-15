@@ -1,5 +1,7 @@
 return {
+    "Shatur/neovim-ayu",
     "marko-cerovac/material.nvim",
+    "gbprod/nord.nvim",
     priority = 1000,
 
     config = function()
@@ -37,10 +39,12 @@ return {
                 colors.lsp.hint = PINK
             end,
         })
+      require('nord').setup({
+        terminal_colors = true,
+      })
     end,
 
     init = function()
-        vim.g.material_style = "oceanic"
-        vim.cmd("colorscheme material")
+      --vim.cmd.colorscheme("nord");
     end,
 }

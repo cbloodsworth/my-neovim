@@ -14,4 +14,14 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({{import = "peargen.plugins.lsp"}, build = ":TSUpdate", {import = "peargen.plugins",}})
+require("lazy").setup({
+  {
+    import = "peargen.plugins.lsp"
+  },
+  {
+    import = "peargen.plugins",
+  },
+  build = ":TSUpdate",
+})
+
+vim.cmd("colorscheme ayu-mirage")
